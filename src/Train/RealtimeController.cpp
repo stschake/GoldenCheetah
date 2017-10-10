@@ -44,11 +44,7 @@ int RealtimeController::pause() { return 0; }
 int RealtimeController::stop() { return 0; }
 bool RealtimeController::find() { return false; }
 bool RealtimeController::discover(QString) { return false; }
-bool RealtimeController::doesPull() { return false; }
-bool RealtimeController::doesPush() { return false; }
-bool RealtimeController::doesLoad() { return false; }
 void RealtimeController::getRealtimeData(RealtimeData &) { }
-void RealtimeController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void
 RealtimeController::processRealtimeData(RealtimeData &rtData)

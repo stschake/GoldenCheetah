@@ -48,14 +48,8 @@ public:
     virtual bool find();                                // tell if the device is present (usb typically)
     virtual bool discover(QString);              // tell if a device is present at serial port passed
 
-    // push or pull telemetry
-    virtual bool doesPush();                    // this device is a push device (e.g. Quarq)
-    virtual bool doesPull();                    // this device is a pull device (e.g. CT)
-    virtual bool doesLoad();                    // this device can generate Load
-
-    // will update the realtime data with current data (only called for doesPull devices)
+    // will update the realtime data with current data
     virtual void getRealtimeData(RealtimeData &rtData); // update realtime data with current values
-    virtual void pushRealtimeData(RealtimeData &rtData); // update realtime data with current values
 
     // only relevant for Computrainer like devices
     virtual void setLoad(double) { return; }

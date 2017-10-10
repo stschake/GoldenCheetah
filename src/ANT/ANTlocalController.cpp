@@ -105,11 +105,6 @@ ANTlocalController::discover(QString name)
     return myANTlocal->discover(name);
 }
 
-
-bool ANTlocalController::doesPush() { return false; }
-bool ANTlocalController::doesPull() { return true; }
-bool ANTlocalController::doesLoad() { return true; }
-
 void
 ANTlocalController::setLoad(double x) {
     myANTlocal->setLoad(x);
@@ -198,8 +193,6 @@ ANTlocalController::resetCalibrationState()
     myANTlocal->resetCalibrationState();
 }
 
-
-void ANTlocalController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void ANTlocalController::antRemoteControl(uint16_t command)
 {

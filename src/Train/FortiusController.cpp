@@ -63,10 +63,6 @@ bool
 FortiusController::discover(QString) {return false; } // NOT IMPLEMENTED YET
 
 
-bool FortiusController::doesPush() { return false; }
-bool FortiusController::doesPull() { return true; }
-bool FortiusController::doesLoad() { return true; }
-
 /*
  * gets called from the GUI to get updated telemetry.
  * so whilst we are at it we check button status too and
@@ -132,8 +128,6 @@ FortiusController::getRealtimeData(RealtimeData &rtData)
     rtData.setLoad(myFortius->getLoad());
     rtData.setSlope(myFortius->getGradient());
 }
-
-void FortiusController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void
 FortiusController::setLoad(double load)

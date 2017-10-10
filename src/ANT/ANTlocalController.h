@@ -56,10 +56,7 @@ public:
     bool discover(QString name);
     void setDevice(QString);
 
-    // telemetry push pull
-    bool doesPush(), doesPull(), doesLoad();
     void getRealtimeData(RealtimeData &rtData);
-    void pushRealtimeData(RealtimeData &rtData);
 
     // now with the kickr we can control trainers
     void setLoad(double);

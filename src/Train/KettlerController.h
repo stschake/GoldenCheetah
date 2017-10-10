@@ -41,10 +41,7 @@ public:
     bool discover(QString);                     // tell if a device is present at port passed
     bool find();
 
-    // telemetry push pull
-    bool doesPush(), doesPull(), doesLoad();
     void getRealtimeData(RealtimeData &rtData);
-    void pushRealtimeData(RealtimeData &rtData);
 
     void setLoad(double);
     void setMode(int) { return ; }

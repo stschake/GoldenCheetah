@@ -63,11 +63,6 @@ ComputrainerController::discover(QString name)
     return myComputrainer->discover(name);  // go probe it...
 }
 
-
-bool ComputrainerController::doesPush() { return false; }
-bool ComputrainerController::doesPull() { return true; }
-bool ComputrainerController::doesLoad() { return true; }
-
 /*
  * gets called from the GUI to get updated telemetry.
  * so whilst we are at it we check button status too and
@@ -173,8 +168,6 @@ ComputrainerController::getRealtimeData(RealtimeData &rtData)
         parent->nextDisplayMode();
     }
 }
-
-void ComputrainerController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void
 ComputrainerController::setLoad(double load)

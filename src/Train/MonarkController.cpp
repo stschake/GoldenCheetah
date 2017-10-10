@@ -71,10 +71,6 @@ MonarkController::discover(QString name)
 }
 
 
-bool MonarkController::doesPush() { return false; }
-bool MonarkController::doesPull() { return true; }
-bool MonarkController::doesLoad() { return true; }
-
 /*
  * gets called from the GUI to get updated telemetry.
  * so whilst we are at it we check button status too and
@@ -101,7 +97,6 @@ MonarkController::getRealtimeData(RealtimeData &rtData)
     rtData.setSlope(m_monark->kp());
 }
 
-void MonarkController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void MonarkController::setLoad(double load)
 {

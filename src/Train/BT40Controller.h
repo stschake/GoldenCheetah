@@ -46,10 +46,7 @@ public:
     bool discover(QString name);
     void setDevice(QString);
 
-    // telemetry push pull
-    bool doesPush(), doesPull(), doesLoad();
     void getRealtimeData(RealtimeData &rtData);
-    void pushRealtimeData(RealtimeData &rtData);
     void setBPM(float x) {
 	telemetry.setHr(x);
     }

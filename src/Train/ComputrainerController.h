@@ -40,11 +40,7 @@ public:
     int stop();                                 // stops data collection thread
     bool discover(QString);                     // tell if a device is present at port passed
 
-
-    // telemetry push pull
-    bool doesPush(), doesPull(), doesLoad();
     void getRealtimeData(RealtimeData &rtData);
-    void pushRealtimeData(RealtimeData &rtData);
     void setLoad(double);
     void setGradient(double);
     void setMode(int);

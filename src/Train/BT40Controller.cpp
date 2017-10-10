@@ -90,11 +90,6 @@ BT40Controller::discover(QString)
     return true;
 }
 
-
-bool BT40Controller::doesPush() { return false; }
-bool BT40Controller::doesPull() { return true; }
-bool BT40Controller::doesLoad() { return true; }
-
 /*
  * gets called from the GUI to get updated telemetry.
  * so whilst we are at it we check button status too and
@@ -107,8 +102,6 @@ BT40Controller::getRealtimeData(RealtimeData &rtData)
     rtData = telemetry;
     processRealtimeData(rtData);
 }
-
-void BT40Controller::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void
 BT40Controller::addDevice(const QBluetoothDeviceInfo &info)

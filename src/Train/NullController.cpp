@@ -75,5 +75,3 @@ void NullController::getRealtimeData(RealtimeData &rtData) {
     }
 }
 
-void NullController::pushRealtimeData(RealtimeData &) {
-}

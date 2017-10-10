@@ -49,12 +49,8 @@ class NullController : public RealtimeController
         int restart();
         bool find();
         bool discover(QString) {  return true;  }
-        bool doesPush() {  return false; }
-        bool doesPull() {  return true; }
-        bool doesLoad() {  return false; }
         void setLoad(double watts) { load = watts; }
         void getRealtimeData(RealtimeData &rtData);
-        void pushRealtimeData(RealtimeData &rtData);
 
     signals:
 

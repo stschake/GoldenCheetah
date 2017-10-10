@@ -65,10 +65,6 @@ KettlerController::discover(QString name)
 }
 
 
-bool KettlerController::doesPush() { return false; }
-bool KettlerController::doesPull() { return true; }
-bool KettlerController::doesLoad() { return true; }
-
 /*
  * gets called from the GUI to get updated telemetry.
  * so whilst we are at it we check button status too and
@@ -93,8 +89,6 @@ KettlerController::getRealtimeData(RealtimeData &rtData)
     rtData.setCadence(m_kettler->cadence());
     rtData.setSpeed(m_kettler->speed());
 }
-
-void KettlerController::pushRealtimeData(RealtimeData &) { } // update realtime data with current values
 
 void KettlerController::setLoad(double load)
 {
